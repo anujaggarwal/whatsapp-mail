@@ -16,6 +16,9 @@ qr.png
 baileys_store*.json
 *.store.json
 
+# Baileys Test Directory (cloned repo)
+baileys/
+
 # Node
 node_modules/
 npm-debug.log*
