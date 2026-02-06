@@ -16,8 +16,13 @@ qr.png
 baileys_store*.json
 *.store.json
 
-# Baileys Test Directory (cloned repo)
-baileys/
+# Baileys subdirectory - exclude sensitive files only
+baileys/auth_info/
+baileys/node_modules/
+baileys/*.log
+baileys/vikas_messages.json
+baileys/whatsapp-history-qr.png
+baileys/.git/
 
 # Node
 node_modules/
