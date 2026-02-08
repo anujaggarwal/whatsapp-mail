@@ -1,5 +1,6 @@
 # Authentication & Session Files
 auth_info/
+auth_info_backup*/
 *.session
 creds.json
 
@@ -59,3 +60,12 @@ logs/
 tmp/
 temp/
 *.tmp
+
+# Frontend
+frontend/.next/
+frontend/node_modules/
+frontend/out/
+
+# Database backups
+backup_*.sql
+*.backup.sql
