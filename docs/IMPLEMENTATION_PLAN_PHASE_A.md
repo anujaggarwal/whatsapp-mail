@@ -33,6 +33,11 @@ Out of scope (later phases):
 - Existing Baileys integration code as migration source.
 - New split services: `web`, `api`, `worker`.
 
+## Execution Status
+1. Completed: `A-0` shared config/constants/logging bootstrap.
+2. Completed: `A-1` monorepo scaffold (`apps/api`, `apps/worker`, `apps/web`, `packages/shared`).
+3. Next: `A-2` Prisma setup and migrations for `tenants`, `users`, `accounts`.
+
 ## Work Breakdown
 
 ### M1 - Foundation (Schema + Service Skeleton)
