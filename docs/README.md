@@ -9,6 +9,7 @@ This folder contains the current product and execution documents for building Wh
 - [Task Board](./TASK_BOARD.md): session-friendly execution tracker with clear input/output and DoD.
 - [Tech Stack Decisions](./TECH_STACK_DECISIONS.md): locked stack choices and mandatory engineering standards.
 - [Session Log](./SESSION_LOG.md): chronological session outcomes and handoff notes.
+- [Operations Runbook](./OPERATIONS.md): restart/build/run commands and troubleshooting notes.
 
 ## Archived Legacy Docs
 These were created during early Baileys exploration and prototype validation. They are retained for reference only.

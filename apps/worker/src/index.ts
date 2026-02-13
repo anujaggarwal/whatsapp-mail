@@ -13,3 +13,8 @@ logger.info(
   },
   'Worker service bootstrap complete'
 );
+
+// Keep the worker process alive until real consumers are wired in.
+setInterval(() => {
+  logger.debug('Worker heartbeat');
+}, 30_000);

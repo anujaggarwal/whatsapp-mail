@@ -69,3 +69,5 @@ frontend/out/
 # Database backups
 backup_*.sql
 *.backup.sql
+# Runtime files
+.run/

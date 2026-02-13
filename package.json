@@ -11,6 +11,8 @@
     "build:api": "pnpm --filter @wm/api build",
     "build:worker": "pnpm --filter @wm/worker build",
     "build:web": "pnpm --filter @wm/web build",
+    "build:all": "pnpm build && pnpm --filter @wm/shared build && pnpm --filter @wm/api build && pnpm --filter @wm/worker build && pnpm --filter @wm/web build && pnpm --dir frontend build",
+    "restart:all": "bash scripts/restart-services.sh",
     "typecheck:api": "pnpm --filter @wm/api typecheck",
     "typecheck:worker": "pnpm --filter @wm/worker typecheck",
     "typecheck:web": "pnpm --filter @wm/web typecheck",

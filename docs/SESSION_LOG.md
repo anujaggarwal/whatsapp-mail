@@ -31,3 +31,34 @@
 ### Next Session Start Point
 1. Begin `A-2`: Prisma initialization and migrations for `tenants`, `users`, `accounts`.
 2. Keep all new work aligned with `docs/TASK_BOARD.md` and update status per task.
+
+## 2026-02-14 (Session Close)
+### Completed
+1. Added full restart automation script:
+- `scripts/restart-services.sh`
+2. Added root command:
+- `pnpm restart:all`
+3. Added root build command:
+- `pnpm build:all`
+4. Added operation artifacts handling:
+- `.run/` ignored in `.gitignore`
+5. Updated app scripts and worker scaffold behavior:
+- start/serve command corrections in `apps/api`, `apps/worker`, `apps/web`
+- temporary worker heartbeat keepalive in `apps/worker/src/index.ts`
+6. Added operations documentation:
+- `docs/OPERATIONS.md`
+
+### Debug Findings
+1. Local runs showed frontend build success but intermittent API/worker restart failures.
+2. Historical errors in logs were from older start paths (`dist/index.js`) and unresolved package linking before local install.
+3. Restart script was hardened with:
+- PID + pattern fallback verification
+- log truncation on each service restart
+
+### Notes
+1. This assistant sandbox cannot fully validate local runtime due process/network syscall restrictions.
+2. Final runtime truth should be checked on local machine via `.run/pids` and `.run/logs`.
+
+### Next Session Start Point
+1. Re-run `./scripts/restart-services.sh` locally and verify all three services stay up.
+2. If stable, proceed with `A-2` (Prisma initialization and migrations).
