@@ -24,8 +24,8 @@ This board is the execution source of truth for multi-session work.
 ## Phase A - Reliability Core (Current Priority)
 | ID | Task | Input | Output | Definition of Done | Status |
 |---|---|---|---|---|---|
-| A-0 | Bootstrap shared config/constants/logging packages | Locked stack decisions | `packages/shared` config schema, constants, pino logger factories | No service hardcodes env-sensitive values | Todo |
-| A-1 | Monorepo app split scaffold | Existing single app | `apps/api`, `apps/worker`, `apps/web`, `packages/shared` | Each app has bootstrapped `package.json`, TS config, startup entry | Todo |
+| A-0 | Bootstrap shared config/constants/logging packages | Locked stack decisions | `packages/shared` config schema, constants, pino logger factories | No service hardcodes env-sensitive values | Done |
+| A-1 | Monorepo app split scaffold | Existing single app | `apps/api`, `apps/worker`, `apps/web`, `packages/shared` | Each app has bootstrapped `package.json`, TS config, startup entry | Done |
 | A-2 | Multi-tenant schema migration v1 | Existing schema | Migrations for `tenants`, `users`, `accounts` | Migrations apply cleanly and rollback works | Todo |
 | A-3 | Sync observability schema | A-2 complete | Migrations for `sync_runs`, `sync_checkpoints` | Tables and indexes created + validated by query | Todo |
 | A-4 | Domain ownership columns | A-2 complete | `tenant_id`/`account_id` on core tables | Composite unique constraints enforce account-scoped idempotency | Todo |
@@ -62,4 +62,4 @@ This board is the execution source of truth for multi-session work.
 
 ## Current Session Outcome Targets
 1. All Phase 0 tasks done.
-2. Start Phase A with `A-1` scaffolding.
+2. Complete `A-0` and `A-1` scaffolding baseline.
