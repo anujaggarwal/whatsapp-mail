@@ -36,6 +36,9 @@ Out of scope (later phases):
 ## Work Breakdown
 
 ### M1 - Foundation (Schema + Service Skeleton)
+#### ORM baseline
+Use Prisma from the first implementation commit (no Sequelize usage in new `apps/*` services).
+
 #### Database migrations
 Create migrations for:
 

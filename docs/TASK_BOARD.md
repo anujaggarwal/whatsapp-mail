@@ -19,10 +19,12 @@ This board is the execution source of truth for multi-session work.
 | P0-1 | Create product docs baseline | Current repo and goals | `PRODUCT_BLUEPRINT.md`, `PRD_SHORT.md`, `IMPLEMENTATION_PLAN_PHASE_A.md` | Docs exist and linked from docs index | Done |
 | P0-2 | Clean legacy clutter | Prototype docs/scripts | Archived legacy files under `docs/archive/` and `legacy/scripts/` | Active root/docs no longer mixed with prototype-only files | Done |
 | P0-3 | Define execution board | Product plan | This `TASK_BOARD.md` | Board includes phases, I/O, and DoD | Done |
+| P0-4 | Lock stack and standards | Product and engineering constraints | `TECH_STACK_DECISIONS.md` | DB/ORM/logging/config standards are fixed | Done |
 
 ## Phase A - Reliability Core (Current Priority)
 | ID | Task | Input | Output | Definition of Done | Status |
 |---|---|---|---|---|---|
+| A-0 | Bootstrap shared config/constants/logging packages | Locked stack decisions | `packages/shared` config schema, constants, pino logger factories | No service hardcodes env-sensitive values | Todo |
 | A-1 | Monorepo app split scaffold | Existing single app | `apps/api`, `apps/worker`, `apps/web`, `packages/shared` | Each app has bootstrapped `package.json`, TS config, startup entry | Todo |
 | A-2 | Multi-tenant schema migration v1 | Existing schema | Migrations for `tenants`, `users`, `accounts` | Migrations apply cleanly and rollback works | Todo |
 | A-3 | Sync observability schema | A-2 complete | Migrations for `sync_runs`, `sync_checkpoints` | Tables and indexes created + validated by query | Todo |
